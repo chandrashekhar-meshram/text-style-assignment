@@ -1,0 +1,28 @@
+#para{
+    font-size:25px;
+    font-family: ;
+}
+
+.b_Para1{   
+    font-weight: bold;
+  }
+
+.b_Para2{   
+    font-weight: normal;
+}
+
+.i_para1{
+    font-style: italic;
+}
+
+.i_para2{
+    font-style: normal;
+}
+
+.u_para1{
+    text-decoration: underline;
+}
+
+.u_para2{
+    text-decoration: none;
+}
