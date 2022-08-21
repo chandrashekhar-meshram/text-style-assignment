@@ -1,55 +1,57 @@
 let para = document.getElementById("para");
+console.log(para);
 
+//color
 let colorInput = document.getElementById("colorbox");
 let colorButton = document.getElementById("color-button");
 
+colorButton.addEventListener("click", (e) => {
+   e.preventDefault();
+   let colorOutPut = colorInput.value;
+   para.style.color = colorOutPut;
+   colorInput.value = "";
+})
 
+
+//Font Size
+let slider = document.getElementById("slider");
+
+slider.addEventListener("change", (e) => {
+   e.preventDefault();   
+   para.style.fontSize = slider.value+"px";
+});
+
+
+//Bold Button
 let boldBtn = document.getElementById("b_Btn");
 
+boldBtn.addEventListener("click", (e) => {
+   e.preventDefault();
+   para.classList.toggle("b_Para2");
+});
+
+
+//Italic Button
 let italicBtn = document.getElementById("i_Btn");
 
+italicBtn.addEventListener("click", (e) => {
+   e.preventDefault();
+   para.classList.toggle("i_para2");
+});
+
+//Underline Button
 let underLineBtn = document.getElementById("u_Btn");
 
+underLineBtn.addEventListener("click", (e) => {
+   e.preventDefault();
+   para.classList.toggle("u_para2");
+});
 
 
-// colorButton.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     let colorOutPut = colorInput.value;
-//     text.innerText.style.color = "colorOutPut";
-
-// })
-
-slider.addEventListener("change", slidFun);
-
-boldBtn.addEventListener("click", boldFun);
-
-italicBtn.addEventListener("click", italicFun);
-
-underLineBtn.addEventListener("click", underLineFun);
-
+//Font Family
 fontFamily.addEventListener("change", changeFontFamily);
-
-
-function slidFun(){
-   let slider = document.getElementById("slider");
-   para.style.fontSize = slider.value+"px";
-   console.log(slider.value);
-}
-
-function boldFun(){
-   para.classList.toggle("b_Para2");
-}
-
-function italicFun(){
-   para.classList.toggle("i_para2");
-}
-
-function underLineFun(){
-   para.classList.toggle("u_para2")
-}
 
 function changeFontFamily(){
    let fontFamily = document.getElementById("fontFamily");
    para.style.fontFamily = fontFamily.value;
-   console.log(fontFamily.value);
 }
